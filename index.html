@@ -1,149 +1,558 @@
-
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-<html>
-	<head >
-		<title>Amplified Scheduler</title>
-		<link rel='icon' type='image/icon' href='favicon.png' />
-		<link rel="stylesheet" href="css/style.css">
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	</head>
-	<body>
-		<div class="wrapper">
-			<nav class="navbar navbar-inverse navbar-fixed-top custom-nav">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button>
-						<a onclick="scroll_to_anchor('home1')"><img class="image-hover" src="images/logo.png" height="50" alt=""></a>
-					</div>
-					
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="navigation">
-						<ul class="nav navbar-nav navbar-right">
-							<li><a onclick="scroll_to_anchor('home2')">Features</a></li>
-							<li><a onclick="scroll_to_anchor('home3')">Screenshots</a></li>
-							<!-- <li><button type="button" class="btn btn-success navbar-btn btn-circle">Sign in</button></li> -->
-						</ul>
-					</div>
+<html lang="en">
+
+<head>
+    <title>LeoJHarris: Xamarin Mobile App Developer</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="My Career Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- for gallery css -->
+    <!-- banner text effect css files -->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style3.css" />
+    <!-- banner text effect css files -->
+    <!-- Navigation-CSS -->
+    <link rel="stylesheet" href="css/menu_sideslide.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+    <!-- for testimonials -->
+    <link href="css/bars.css" rel="stylesheet" type="text/css">
+    <!-- for skills -->
+    <!-- custom-theme files -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //custom-theme files -->
+    <!-- font-awesome-icons -->
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- //font-awesome-icons -->
+    <!-- googlefonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <!-- //googlefonts -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="aitsheaderw3ls" id="agilehome">
+        <!-- Navigation -->
+        <div class="agiletopbar">
+            <div class="wthreenavigation">
+                <div class="menu-wrap">
+                    <nav class="menu">
+                        <div class="icon-list">
+                            <a class="scroll active" href="#agilehome"><i class="fa fa-home"></i><span>Home</span></a>
+                            <a class="scroll" href="#about"><i class="fa fa-info"></i><span>About</span></a>
+                            <a class="scroll" href="#skills"><i class="fa fa-bar-chart"></i><span>Skills</span></a>
+                            <a class="scroll" href="#gallery"><i class="fa fa-picture-o"></i><span>Portfolio</span></a>
+                            <a class="scroll" href="#education"><i class="fa fa-book"></i><span>Education</span></a>
+                            <a class="scroll" href="#experience"><i class="fa fa-university"></i><span>Experience</span></a>
+                            <a class="scroll" href="#stats"><i class="fa fa-laptop"></i><span>Technical Skills</span></a>
+                            <a class="scroll" href="#contact"><i class="fa fa-phone"></i><span>Contact Me</span></a>
+                        </div>
+                    </nav>
+                    <button class="close-button" id="close-button">Close Menu</button>
+                </div>
+                <button class="menu-button" id="open-button">Open Menu</button>
+            </div>
+            <div class="agileinfomenu">
+                <p>MENU</p>
+            </div>
+            <div class="aitslogow3ls">
+                <a href="index.html">
+                    <div class="agilelogo">LeoJHarris</div>
+                </a>
+            </div>
+            <div class="wthreecontact">
+                <p><a class="scroll" href="#contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> CONTACT ME</a></p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- //Navigation -->
+    </div>
+    <!-- //Header -->
+    <!-- Banner -->
+    <!--  <div class="banner">
+	<div class="container">
+			<div class="w3_banner_info">
+				<div class="w3_banner_info_grid">
+					<h1>
+  					<a href="" class="typewrite" data-period="2000" data-type='[ "Hi, my name is Leonard.", "I am a Xamarin Mobile Developer.", "I Love Coding.","I Love Solving Problems.","I Love Developing Beutiful Mobile Apps."]'>
+  					</a>
+					</h1>
+					<ul class="social-nav model-3d-0 footer-social w3_agile_social">
+						<li><a href="#" class="facebook">
+							<div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+							<div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
+						</li>
+						<li><a href="#" class="twitter"> 
+							<div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+							<div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
+						</li>
+						<li><a href="#" class="instagram">
+							<div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+							<div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a>
+						</li>
+						<li><a href="#" class="pinterest">
+							<div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+							<div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a>
+						</li>
+					</ul>
 				</div>
-			</nav>
-			<header class="header" >
-				<div class="section home1" id="home1">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-9 col-md-offset-1">
-								<div class="row">
-									<div class="row">
-										<div class="col-xs-12 col-sm-6 col-lg-6 col-md-6 mt-100 mb-100">
-											<div class="text-center">
-												<h1 class="page-header">Amplified Scheduler</h1>
-												<a href="https://play.google.com/store/apps/details?id=com.lh.leonard.amplifiedscheduler&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img width="185px" height="60" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" /></a>
-											</div>
-										</div>
-										<div class="col-xs-12 col-sm-6 col-lg-6 col-md-6 mt-100">
-											<div class="phone">
-												<img class="img-responsive" src="images/phone.png">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</header>
-				<section class="section home2" id="home2">
-					<div class="container">
-						<div class="row">
-							<h2 class="h1 page-sub-headers text-center">
-							DISCOVER THE FEATURES</h2>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 col-sm-5 col-md-5 col-md-5">
-								<div class="phone">
-									<img class="img-responsive" src="images/home2.png">
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 features-text">
-								<div class="row">
-									<div class="col-xs-12 col-sm-12 col-md-12 mt-100 mb-100" ><a class="media-left" href="#">
-										<span class="glyphicon glyphicon-send icon"></span>
-									</a>
-									<div class="media-body">
-										<h3 class="media-heading">Powerful Event Making</h3>
-										<p>Use the power of Google Maps and Google Places, set event space restrictions, categorize events, keep private notes on events and more...</p>
-									</div></div>
-									<div class="col-xs-12 col-sm-12 col-md-12 mt-100 mb-100" ><a class="media-left" href="#">
-										<span class="glyphicon glyphicon-bullhorn icon"></span>
-									</a>
-									<div class="media-body">
-										<h3 class="media-heading">Push Notifications</h3>
-										<p>Get alerts even when the app is closed so you can stay in the loop no matter where you are or what your doing.
-										</p>
-									</div></div>
-									<div class="col-xs-12 col-sm-12 col-md-12 mt-100 mb-100" ><a class="media-left" href="#">
-										<span class="glyphicon glyphicon-calendar icon"></span>
-									</a>
-									<div class="media-body">
-										<h3 class="media-heading">3 Powerful Calendar Views</h3>
-										<p>Get more insight into events with our weekview, calendar view or full month overview</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="section" id="home3">
-					<div class="container">
-						<div class="row">
-							<h2 class="h1  page-sub-headers text-center">SCREENSHOTS</h2>
-							<h4 class="text-center">Sneak peak previews</h4>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-								<div class="row">
-									<div class="col-xs-12 col-sm-4 col-lg-4 col-md-4 col-lg-4 mt-100 mb-100 line-bottom">
-										<div class="phone">
-											<img class="img-responsive" src="images/screenshot4.png">
-										</div>
-									</div>
-									<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mt-100 mb-100 line-bottom">
-										<div class="phone">
-											<img class="img-responsive" src="images/screenshot2.png">
-										</div>
-									</div>
-									<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mt-100 mb-100 line-bottom">
-										<div class="phone">
-											<img class="img-responsive" src="images/screenshot3.png">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<footer class="footer text-center">
-					<div class="container">
-						<small>Amplified Scheduler</small>
-					</div>
-				</footer>
 			</div>
-			<!-- jQuery library -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-			<!-- Latest compiled and minified JavaScript -->
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-			<script>
-			function scroll_to_anchor(anchor_id){
-			var tag = $("#"+anchor_id+"");
-			$('html,body').animate({scrollTop: tag.offset().top  -45},'slow');
-			}
-			</script>
-		</body>
-	</html>
+	</div>
+</div> -->
+    <!-- //Banner -->
+    <!-- About -->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="col-md-6 aboutleft">
+                <img src="images/about.jpg" alt="" />
+            </div>
+            <div class="col-md-6 aboutright">
+                <div class="clients">
+                    <section class="slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <h3>Personal information</h3>
+                                    <ul class="address">
+                                        <li>
+                                            <ul class="agileits-address-text ">
+                                                <li><b>D.O.B</b></li>
+                                                <li>1991</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li><b>PHONE</b></li>
+                                                <li>+64 27 8720215</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li><b>EXPERIENCE</b></li>
+                                                <li>2+ Years</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li><b>ADDRESS </b></li>
+                                                <li>Bay of Plenty, New Zealand.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li><b>E-MAIL </b></li>
+                                                <li><a href="mailto:leojharris@hotmail.com"> leojharris@hotmail.com</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <ul class="agileits-address-text">
+                                                <li><b>GitHub </b></li>
+                                                <li><a href="https://github.com/LeoJHarris">github.com/LeoJHarris</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <ul class="hireme">
+                                        <li><a href="index.html#contact" class="w3ls_more">Hire Me</a></li>
+                                        <li><a class="w3l_contact" href="files/leonards-cv.pdf" download><i class="fa fa-download" aria-hidden="true" ></i> Download CV</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>Hi, my name is Leonard Harris</h3>
+                                    <h4>Remote Xamarin Mobile Developer</h4>
+                                    <p>Passionate Xamarin Developer with over 2 years commercial experience having successfully developed and deployed to store multiple mobile apps.</p>
+                                    <p>An autonomous worker with excellent interpersonal skills, committed to developing beautiful, intuitive and user friendly mobile app solutions.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- About -->
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="skills-bar">
+                <h3 class="heading">My Skills</h3>
+                <section class='bar'>
+                    <section class='wrap'>
+                        <div class='wrap_right'>
+                            <div class='bar_group'>
+                                <div class='bar_group__bar thin' label='Interpersonal Skills' show_values='true' tooltip='true' value='100'></div>
+                                <div class='bar_group__bar thin' label='Xamarin.Forms' show_values='true' tooltip='true' value='90'></div>
+                                <div class='bar_group__bar thin' label='C#' show_values='true' tooltip='true' value='85'></div>
+                                <div class='bar_group__bar thin' label='MVVM' show_values='true' tooltip='true' value='85'></div>
+                                <div class='bar_group__bar thin' label='Native Android' show_values='true' tooltip='true' value='65'></div>
+                                <div class='bar_group__bar thin' label='MVC' show_values='true' tooltip='true' value='45'></div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <div class='clearfix'></div>
+            </div>
+        </div>
+    </section>
+    <!-- //Skills -->
+    <!-- gallery -->
+    <div id="gallery" class="gallery">
+        <h3 class="heading">Portfolio</h3>
+        <div class="gallery-info">
+            <div class="col-md-3 gallery-grids">
+                <a href="images/amplifiedscheduler-dashboard.png" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="images/amplifiedscheduler-dashboard1.png" alt="" class="img-responsive zoom-img">
+					</a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/portfolio - management.png" class="gallery-box" data-lightbox="example-set" data-title="Inventory Managment app is a (SaaS) logistics inventory management tool that provides full overview of inventory and locations in real time. Quick bar code / QR code scanning or item look up provides item information and history. Move, Allocate or record condition with camera functionality. Supports offline functionality. Designed for tablet devices.">
+						<img src="images/inventorymanagement-scan1.png" alt="Inventory Managment app is a (SaaS) logistics inventory management tool that provides full overview of inventory and locations in real time. Quick bar code / QR code scanning or item look up provides item information and history. Move, Allocate or record condition with camera functionality. Supports offline functionality. Designed for tablet devices." class="img-responsive zoom-img">
+					</a>
+            </div>
+            <div class="col-md-3 gallery-grids">
+                <a href="images/portfolio - trackit.png" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="images/mytrackit-inventories1.png" alt="" class="img-responsive zoom-img">
+					</a>
+            </div>
+            <div class="col-md-3 gallery-grids grid-mdl">
+                <a href="images/orderentry.png" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="images/orderentry1.png" alt="" class="img-responsive zoom-img">
+					</a>
+            </div>
+            <div class="col-md-3 gallery-grids grid-mdl">
+                <a href="images/Portfolio.png" class="gallery-box" data-lightbox="example-set" data-title="Trackit education app is a (SaaS) solution that makes the process of tracking students' progress and assessment of skills more efficient. For client / server side API integration, Trackit education app uses Polly project library part of the .NET foundation, which is a .NET resilience and transient-fault-handling library. Additional library functionalities include taking videos, photos and file picking. Supports offline functionality.">
+						<a href="images/Portfolio2.png" class="gallery-box" data-lightbox="example-set" data-title="Trackit education app is a (SaaS) solution that makes the process of tracking students' progress and assessment of skills more efficient. For client / server side API integration, Trackit education app uses Polly project library part of the .NET foundation, which is a .NET resilience and transient-fault-handling library. Additional library functionalities include taking videos, photos and file picking. Supports offline functionality.">
+						<img src="images/trackiteducation-skilloverview1.png" alt="Trackit education app is a (SaaS) solution that makes the process of tracking students' progress and assessment of skills more efficient. For client / server side API integration, Trackit education app uses Polly project library part of the .NET foundation, which is a .NET resilience and transient-fault-handling library. Additional library functionalities include taking videos, photos and file picking. Supports offline functionality." class="img-responsive zoom-img">
+					</a>
+            </div>
+            <div class="col-md-3 gallery-grids grid-mdl">
+                <a href="images/Portfolio-TRFU.png" class="gallery-box" data-lightbox="example-set" data-title="TRFU app makes following favorite local Taranaki Rugby Teams simple and easy. Get the latest news, results or upcoming matches at your finger tips. TRFU app uses Auth0 and Facebook for seamless identity authentication and push notifications that always keeps users updated.">
+						<img src="images/trfu-login1.png" alt="TRFU app makes following favorite local Taranaki Rugby Teams simple and easy. Get the latest news, results or upcoming matches at your finger tips. TRFU app uses Auth0 and Facebook for seamless identity authentication and push notifications that always keeps users updated." class="img-responsive zoom-img">
+					</a>
+            </div>
+            <div class="col-md-3 gallery-grids grid-mdl">
+                <a href="images/xeniaguest.png" class="gallery-box" data-lightbox="example-set" data-title="">
+						<img src="images/xeniaguest1.png" alt="" class="img-responsive zoom-img">
+					</a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <script src="js/lightbox-plus-jquery.min.js"></script>
+    </div>
+    <!-- //gallery -->
+    <!-- Education -->
+    <div class="education" id="education">
+        <div class="container">
+            <h3 class="heading">Education</h3>
+            <div class="col-md-12">
+                <div class="grid1">
+                    <h3>Bachelor Degree of Computing Science</h3>
+                    <p>Obtained my Bachelors Degree with eligibility to further my Degree with Honors</p>
+                    <h4><b>Year</b> : 2012-2015</h4>
+                </div>
+            </div>
+            <!-- <div class="col-md-6">
+                <div class="grid1">
+                    <h3>Bachelor Degree of education</h3>
+                    <p>Dignissim elit at ligula laoreet iaculis. Sed urna purus, convallis sedrhon cus eget, bibendum idtortor. Donec libero tellus, feugiat ut felis ac, commodo pharetra massa</p>
+                    <h4><b>Year</b> : 2011-2013</h4>
+                </div>
+            </div> -->
+            <div class='clearfix'></div>
+            <!-- <div class="educationbottom">
+    <div class="col-md-6">
+        <div class="grid1">
+            <h3>Bachelor Degree of education</h3>
+            <p>Dignissim elit at ligula laoreet iaculis. Sed urna purus, convallis sedrhon cus eget, bibendum idtortor. Donec libero tellus, feugiat ut felis ac, commodo pharetra massa</p>
+            <h4><b>Year</b> : 2011-2013</h4>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="grid1 lastgrid">
+            <h3>Bachelor Degree of education</h3>
+            <p>Dignissim elit at ligula laoreet iaculis. Sed urna purus, convallis sedrhon cus eget, bibendum idtortor. Donec libero tellus, feugiat ut felis ac, commodo pharetra massa</p>
+            <h4><b>Year</b> : 2011-2013</h4>
+        </div>
+    </div>
+    <div class='clearfix'></div>
+</div> -->
+        </div>
+    </div>
+    <!-- //Education -->
+    <!-- Work experience -->
+    <div class="experience" id="experience">
+        <div class="container">
+            <h3 class="heading">Experience</h3>
+            <div class="col-md-6">
+                <div class="grid1">
+                    <h3><i class="fa fa-mobile" aria-hidden="true"></i>Lead Xamarin Mobile Developer - <a href="https://www.efinity.co.nz/">Efinity Digital</a></h3>
+                    <p>Full mobile app development including XAML, code behind and any required native platform implementations</p>
+                    <p> • Provide maintenance and new functionality to existing apps Ensuring beta testing using HockeyApp and successful app deployment </p>
+                    <p> • Worked closely with designers and developers to help shape design and architecture of mobile apps </p>
+                    <p> • Developing SaaS mobile solutions</p>
+                    <h4><b>Year</b> : 2016-2018</h4>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="grid1">
+                    <h3><i class="fa fa-mobile" aria-hidden="true"></i>Lead Xamarin Mobile Developer - <a href="https://xeniasuite.com">Xenia Suite</a></h3>
+                    <p>Xamarin Mobile Developer working on Hotel management software as well as stock order management software</p>
+                    <h4><b>Year</b> : 2018-Current</h4>
+                </div>
+            </div>
+            <div class='clearfix'></div>
+            <!-- <div class="educationbottom">
+                <div class="col-md-6">
+                    <div class="grid1">
+                        <h3><i class="fa fa-mobile" aria-hidden="true"></i> Mobile App Developer </h3>
+                        <p>Dignissim elit at ligula laoreet iaculis. Sed urna purus, convallis sedrhon cus eget, bibendum idtortor. Donec libero tellus</p>
+                        <h4><b>Year</b> : 2011-2013</h4>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="grid1 lastgrid">
+                        <h3><i class="fa fa-line-chart" aria-hidden="true"></i> Graphic Designer</h3>
+                        <p>Dignissim elit at ligula laoreet iaculis. Sed urna purus, convallis sedrhon cus eget, bibendum idtortor. Donec libero tellus</p>
+                        <h4><b>Year</b> : 2011-2013</h4>
+                    </div>
+                </div> -->
+            <div class='clearfix'></div>
+        </div>
+    </div>
+    </div>
+    <!-- //Work experience -->
+    <!-- Technical Skills -->
+    <!-- <div class="count-agileits" id="stats">
+        <div class="container">
+            <h3 class="heading">Technical Skills</h3>
+            <div class="count-grids">
+                <div class="count-bgcolor-w3ls">
+                    <div class="col-md-3 count-grid">
+                        <div class="count hvr-bounce-to-bottom">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='7' data-delay='1' data-increment="1">7</div>
+                            <span></span>
+                            <h5>Mobiles App Released To Store</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3 count-grid">
+                        <div class="count hvr-bounce-to-bottom">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='2' data-delay='1' data-increment="1">2</div>
+                            <span></span>
+                            <h5>New Companies</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3 count-grid">
+                        <div class="count hvr-bounce-to-bottom">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='2' data-delay='1' data-increment="1">2</div>
+                            <span></span>
+                            <h5>Mobile Designs</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3 count-grid">
+                        <div class="count hvr-bounce-to-bottom">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='10' data-delay='1' data-increment="1">10+</div>
+                            <span></span>
+                            <h5>Happy clients</h5>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Technical Skills -->
+    <!-- contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h3 class="heading">Contact Me</h3>
+            <div class="col-md-4 address">
+                <h3>Address</h3>
+                <div class="mail-agileits-w3layouts">
+                    <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
+                    <div class="contact-right">
+                        <p>Phone</p><span>+64 27 8720215</span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="mail-agileits-w3layouts">
+                    <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                    <div class="contact-right">
+                        <p>Email</p><a href="mailto:leojharris@hotmail.com">leojharris@hotmail.com</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="mail-agileits-w3layouts">
+                    <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                    <div class="contact-right">
+                        <p>Address</p><span>Bay of Plenty, New Zealand.</span>
+                        <!-- <p><span>Towers, Singapore.</span></p> -->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="col-md-4 form">
+                <form id="gform" action="https://script.google.com/macros/s/AKfycbz0gHnwbd9citsVrKqdJqynQaN4QUnBSVu_m_8O/exec" method="POST">
+                    <div class="fields-grid">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="name" required="">
+                            <label>Full Name</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="email" name="email" required>
+                            <label>Email</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="tel" name="phone" required>
+                            <label>Phone Number</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <textarea name="message" required></textarea>
+                            <label>Message</label>
+                            <span></span>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <input type="submit" value="SEND">
+                </form>
+                <!-- Customise the Thankyou Message People See when they submit the form: -->
+                <div style="display:none;" id="thankyou_message">
+                    <h2><em>Thanks</em> for contacting me!
+      I will get back to you soon!</h2>
+                </div>
+            </div>
+            <div class="col-md-4 map">
+                <iframe src=https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Tauranga+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed></iframe>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- //contact -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <h3><a href="index.html">LeoJHarris</a></h3>
+            <p>© 2017 My Career. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+            <!-- <ul class="social-nav model-3d-0 footer-social w3_agile_social">
+                <li>
+                    <a href="#" class="facebook">
+                        <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="twitter">
+                        <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="instagram">
+                        <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="pinterest">
+                        <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                        <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                    </a>
+                </li>
+            </ul> -->
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <script type="text/javascript" src="js/numscroller-1.0.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+    <!-- numscroller js file -->
+    <!-- scrolling script -->
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+        });
+    });
+    </script>
+    <!-- //scrolling script -->
+    <!-- //here starts scrolling icon -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <!-- here stars scrolling script -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        /*
+        	var defaults = {
+        	containerID: 'toTop', // fading element id
+        	containerHoverID: 'toTopHover', // fading element hover id
+        	scrollSpeed: 1200,
+        	easingType: 'linear' 
+        	};
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+    </script>
+    <!-- //here ends scrolling script -->
+    <!-- //here ends scrolling icon -->
+    <!-- Navigation-JavaScript -->
+    <script src="js/classie.js"></script>
+    <script src="js/main.js"></script>
+    <!-- //Navigation-JavaScript -->
+    <!-- FlexSlider-JavaScript -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        SyntaxHighlighter.all();
+    });
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function(slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+    </script>
+    <!-- //FlexSlider-JavaScript -->
+    <!-- bars js files -->
+    <script src="js/bars.js"></script>
+    <!-- //bars js files -->
+    <!-- banner text effect js file -->
+    <script src="js/modernizr.custom.72111.js"></script>
+    <!-- banner text effect js file -->
+    <!-- for bootstrap working -->
+    <script src="js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
