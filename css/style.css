@@ -493,7 +493,7 @@ ul.hireme {
   transform: translateX(-50%) translateY(-30px);
   border-radius: 2px;
   line-height: 11px;
-  bottom: 9px;
+  bottom: 16px;
 }
 .skills-bar .b_tooltip span {
   color: white;
