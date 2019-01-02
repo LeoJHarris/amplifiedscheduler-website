@@ -374,6 +374,7 @@ ul.hireme {
     margin-bottom: 1em;
 }
 /*-- //clients--*/
+
 /* //About */
 
 /*-- Skills --*/
@@ -492,6 +493,7 @@ ul.hireme {
   transform: translateX(-50%) translateY(-30px);
   border-radius: 2px;
   line-height: 11px;
+  bottom: 9px;
 }
 .skills-bar .b_tooltip span {
   color: white;
@@ -530,7 +532,6 @@ ul.hireme {
   position: relative;
 }
 /*-- //skills --*/
-
 
 /* education */
 .grid1 h3 {
