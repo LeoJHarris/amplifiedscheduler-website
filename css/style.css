@@ -461,6 +461,7 @@ ul.hireme {
   width: 0%;
   height: 12px;
   border-radius: 2px;
+  margin-top: 10px;
   margin-bottom: 10px;
   -webkit-transition: width 1s;
           transition: width 1s;
