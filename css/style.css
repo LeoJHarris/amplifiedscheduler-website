@@ -121,7 +121,7 @@ img{
 
 /* banner */
 .banner {
-    background: url(../images/banner.jpg) no-repeat 0px 0px;
+    background: url(https://sg.fiverrcdn.com/photo3s/43854679/original/a8d9e4120b23ded91649fbf1e054358bf67ed52c.jpg?1465849100) no-repeat 0px 0px;
     background-size: cover;
 	min-height:770px;
 }
@@ -440,9 +440,6 @@ ul.hireme {
 
 
 /*-- skills --*/
-.skills-bar {
-    margin-top: 3em;
-}
 .skills-bar .bar_group__bar.thin::before, .skills-bar .bar_group__bar.thick::before {
   display: block;
   content: '';
