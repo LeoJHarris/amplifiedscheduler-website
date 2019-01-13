@@ -7,11 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="leojharris leonard harris xamarin developer programmer c# mobile apps" />
-    <script>
-        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-
-    function hideURLbar() { window.scrollTo(0, 1); }
-    </script>
+  
     <link rel="stylesheet" href="css/lightbox.css">
     <!-- for gallery css -->
     <!-- banner text effect css files -->
@@ -37,28 +33,43 @@
     <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
     <!-- //googlefonts -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/devices.min.css">
+
+    <script>
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
 </head>
 
 <body>
-    <div id="home" class="container">
-        <div class="phone">
-            <div class="content">
-                <nav>
-                    <div id="menuToggle">
-                        <input type="checkbox" />
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <ul id="menu">
-                            <li><a class="scroll active" href="#home">Home</a></li>
-                            <li><a class="scroll" href="#skills">Skills</a></li>
-                            <li><a class="scroll" href="#portfolio">Portfolio</a></li>
-                            <li><a class="scroll" href="#contact-form">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="inner-content">
-                    <!-- Banner -->
+
+
+
+<div class="marvel-device note8" style="height: 100%; width: 100%; ">
+
+    <div class="inner"></div>
+
+<div class="overflow">
+    <div class="shadow"></div>
+</div>
+<div class="speakers"></div>
+<div class="sensors"></div>
+<div class="more-sensors"></div>
+<div class="sleep"></div>
+<div class="volume"></div>
+<div class="camera"></div>
+<div class="screen">
+    
+    <!-- Content here -->
+
+
+
+
+
+
+
+<!-- Banner -->
                     <section style="background: #161616 url(images/pattern_40.gif) top left repeat;">
                         <div class="profile-user-page">
                             <div class="img-user-profile">
@@ -606,7 +617,7 @@
                 <script>
                 (function($) {
                     $(window).on("load", function() {
-                        $(".inner-content").mCustomScrollbar({
+                        $(".screen").mCustomScrollbar({
                             theme: "minimal-dark",
                         });
                     });
@@ -665,9 +676,19 @@
                 });
                 </script>
                 <script src="js/custom.js"></script>
-            </div>
-        </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
 </body>
 
 </html>
