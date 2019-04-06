@@ -40,7 +40,7 @@
     </script>
 </head>
 
-<body>
+<body id="content">
     <!-- Banner -->
     <section style="background: #161616 url(images/pattern_40.gif) top left repeat;">
         <div class="profile-user-page">
@@ -588,7 +588,7 @@
     <script>
     (function($) {
         $(window).on("load", function() {
-            $("body").mCustomScrollbar({
+            $("#content").mCustomScrollbar({
                 theme: "minimal-dark",
             });
         });
