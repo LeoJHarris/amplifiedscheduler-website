@@ -168,27 +168,6 @@ $(function() {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var contactForm = document.querySelector('.contact-form');
 var contactHead = document.querySelector('.contact-head');
 var textboxen = Array.prototype.slice.call(document.querySelectorAll(".contact-form input"));
