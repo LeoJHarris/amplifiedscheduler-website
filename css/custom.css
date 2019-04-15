@@ -364,7 +364,7 @@ Main components
 }
 
 .cd-timeline-img {
-    background: white;
+    background: black;
 }
 
 @media only screen and (min-width: 1170px) {
@@ -1335,11 +1335,7 @@ html {
 html,
 body {
     height: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+     overflow-y: scroll;
 }
 
 #coffee-wrap {
@@ -2066,22 +2062,4 @@ body {
     100% {
         opacity: 0;
     }
-}
-
-
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    /* remove scrollbar space */
-    background: transparent;
-    /* optional: just make scrollbar invisible */
-}
-
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
 }
