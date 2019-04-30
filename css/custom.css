@@ -364,7 +364,7 @@ Main components
 }
 
 .cd-timeline-img {
-    background: black;
+    background: #161616 url("images/pattern_40.gif") top left repeat;
 }
 
 @media only screen and (min-width: 1170px) {
