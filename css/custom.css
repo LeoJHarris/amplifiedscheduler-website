@@ -606,7 +606,7 @@ Main components
 }
 
 .profile-user-page .img-user-profile .profile-bgHome {
-    height: 185px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -625,6 +625,8 @@ Main components
     border: 2px solid white; margin: auto
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
+    margin-top: -100px;
+
 }
 
 .profile-user-page .user-profile-data,
