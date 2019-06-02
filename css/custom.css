@@ -1,22 +1,102 @@
+
 body {
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
 }
 
-ul {
-    padding: 0;
-    list-style-type: none;
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
+
+.character {
+  color: #80b8d9;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
-section {}
+.face {
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+.face:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  cursor: pointer;
+}
+.face.is-active {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
 
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-style: italic;
+}
 
-nav {
-    background-color: black;
-    height: 65px;
+.name {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.quotation {
+  margin-top: -20px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile {
+  max-width: 600px;
+  margin: 0 auto;
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position-x: -20%;
+  background-position-y: 50%;
+  background-color: #000;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  position: relative;
+}
+@media (min-width: 425px) {
+  .profile {
+    background-position-x: right;
+  }
+}
+@media (min-width: 685px) {
+  .profile {
+    background-position-x: 0%;
+    padding-left: 28rem;
+    padding-right: 3rem;
+  }
+}
+.profile::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 180px;
+  top: 0;
+}
+@media (min-width: 500px) {
+  .profile::after {
+    display: none;
+  }
 }
 
 .diagonal{
@@ -206,9 +286,6 @@ img.rounded {
 .tab-content>.active {
     display: block;
 }
-
-@import url(https://fonts.googleapis.com/css?family=Raleway:300);
-@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
 
 .align-center {
     text-align: center;
@@ -509,6 +586,87 @@ Main components
 }
 
 
+.character {
+  color: #80b8d9;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.face {
+  background-size: cover;
+  color: rgba(0, 0, 0, 0.2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+.face:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  cursor: context-menu;
+}
+.face.is-active {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+.face1 {
+  background-image: url(../images/me2_hq.jpg);
+}
+
+.face2 {
+   background-image: url(../images/me_hq_close.jpg);
+  background-position-y: 50%;
+}
+.face3 {
+  background-image: url(../images/me4_hq.jpg);
+  background-position-y: 50%;
+}
+
+.title {
+  margin-top: 3rem;
+  padding-top: 0.5rem;
+  display: block;
+    font-family: 'Coda', cursive;
+  text-align: center;
+}
+
+@media (min-width: 425px) {
+  .title {
+    font-size: 5.5rem;
+  }
+}
+@media (min-width: 560px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 685px) {
+  .title {
+    font-size: 7rem;
+  }
+}
+@media (min-width: 850px) {
+  .title {
+    padding-top: 1.2rem;
+    font-size: 10rem;
+  }
+}
+@media (min-width: 938px) {
+  .title {
+    font-size: 10rem;
+  }
+}
+@media (min-width: 1026px) {
+  .title {
+    font-size: 14rem;
+  }
+}
+
 @media only screen and (min-width: 1170px) {
     .cd-timeline-content {
         color: white;
@@ -557,48 +715,17 @@ Main components
     }
 }
 
-
-* {
-    font-family: 'Open Sans', sans-serif;
-}
-
 .well {
     margin-top: -20px;
-    background-color: #007FBD;
-    border: 2px solid #0077B2;
     text-align: center;
     cursor: pointer;
-    font-size: 25px;
     padding: 15px;
     border-radius: 0px !important;
-}
-
-.well:hover {
-    margin-top: -20px;
-    background-color: #0077B2;
-    border: 2px solid #0077B2;
-    text-align: center;
-    cursor: pointer;
-    font-size: 25px;
-    padding: 15px;
-    border-radius: 0px !important;
-    border-bottom: 2px solid rgba(97, 203, 255, 0.65);
 }
 
 .profile {
     vertical-align: middle;
 }
-
-.navbar {
-    border-radius: 0px;
-}
-
-.navbar-default {
-    background-color: transparent;
-    border: 0px;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400|Lato:400,300|Coda|Open+Sans);
 
 .profile-user-page .img-user-profile {
     margin: 0 auto;
@@ -713,13 +840,6 @@ Main components
 }
 
 .profile-user-page .data-user li a:hover span {}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
-}
 
 .center {
     width: 100%;
@@ -836,20 +956,6 @@ hr {
     color: #ffffff;
 }
 
-::selection {
-    background: #F9165D;
-    background-color: #F9165D;
-    background-image: none;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-clip: border-box;
-    background-origin: padding-box;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-size: auto auto;
-    color: #ffffff;
-}
-
 .subsection {
     flex-grow: 1;
     flex-shrink: 0;
@@ -906,6 +1012,161 @@ hr {
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+
+$breakpoint-1: 425px;
+$breakpoint-2: 560px;
+$breakpoint-3: 685px;
+$breakpoint-4: 850px;
+$breakpoint-5: 938px;
+$breakpoint-6: 1026px;
+
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.character {
+    color: #80b8d9;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.face {
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    
+    &:hover {
+        filter: grayscale(0%);
+        cursor: pointer;
+    }
+    
+    &.is-active {
+        filter: grayscale(0%);
+    }
+    
+    &--bryan {
+        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/face-bryan-2.jpeg);
+        background-position-y: 50%;
+        margin-left: -9px;
+        
+        @media (min-width: $breakpoint-1) {
+            margin-left: -12px;
+        }
+        
+        @media (min-width: $breakpoint-2) {
+            margin-left: -15px;
+        }
+        
+        @media (min-width: $breakpoint-3) {
+            margin-left: -20px;
+        }
+        
+        @media (min-width: $breakpoint-4) {
+            margin-left: -25px;     
+        }
+        
+        @media (min-width: $breakpoint-5) {
+            margin-left: -30px;
+        }
+    }
+    
+    &--tatiana {
+        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/face-tatiana.jpeg);
+        background-position-y: 40%;
+    }
+    
+    &--tony {
+        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/face-tony.jpeg);
+        background-position-y: 85%;
+        margin-left: -10px;
+        
+        @media (min-width: $breakpoint-1) {
+            margin-left: -15px;
+        }
+        
+        @media (min-width: $breakpoint-2) {
+            margin-left: -18px;
+        }
+        
+        @media (min-width: $breakpoint-3) {
+            margin-left: -24px;
+        }
+        
+        @media (min-width: $breakpoint-4) {
+            margin-left: -30px;
+        }
+        
+        @media (min-width: $breakpoint-5) {
+            margin-left: -35px;
+        }
+    }
+}
+
+.footer {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.name {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.quotation {
+    margin-top: -20px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.profile {
+    max-width: 600px;
+    margin: 0 auto;
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position-x: -20%;
+    background-position-y: 50%;
+    background-color: #000;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    color: #fff;
+    position: relative;
+    
+    @media (min-width: $breakpoint-1) {
+        background-position-x: right;
+    }
+    
+    @media (min-width: $breakpoint-3) {
+        background-position-x: 0%;
+        padding-left: 28rem;
+        padding-right: 3rem;    
+    }
+    
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 180px;
+        top: 0;
+        
+        @media (min-width: 500px) {
+            display: none;
+        }
+    }
 }
 
 @font-face {
@@ -994,7 +1255,7 @@ hr {
     color: white;
     background: none;
     box-sizing: border-box;
-    max-width: 90%;
+    max-width: 40%;
     padding: .75em;
     outline: none;
     border-radius: none;
@@ -1030,7 +1291,6 @@ hr {
 }
 
 @media all and (max-width: 400px) {
-
     .contact-form textarea,
     .contact-form input {
         padding: .25em;
@@ -1190,12 +1450,88 @@ hr {
     }
 }
 
-
 .contact-form-wrapper {
     background: #161616 url("../images/pattern_40.gif") top left repeat;
     padding-top: 50px;
 }
 
+#h4_exp {
+  text-align: left;
+}
+
+.fa {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.flex-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+h4 {
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+}
+.flex-box img {
+  display: block;
+  width: 100%;
+}
+.thumbnail .caption {
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+}
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.socialbtns, .socialbtns ul, .socialbtns li {
+  margin: 0;
+  padding-bottom: 5px;
+  padding-top: 10px
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+    width: 80px;
+    font-size: 40px;
+    height: 80px;
+    color: #000;
+    background-color: #FFF;
+    border: 1px solid #000;
+    padding-top: 23px;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -o-border-radius: 40px;
+    margin-left: 20px;
+  margin-right: 20px;
+}
+
+.socialbtns .fa:hover {
+    color: #FFF;
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+.intro-text {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: large;
+}
+
+.intro-text2 {
+  font-size: 3rem;
+  text-align: center;
+}
 
 .skillbar {
     position: relative;
@@ -1269,90 +1605,6 @@ hr {
     line-height: 35px;
     color: #ffffff;
     color: rgba(0, 0, 0, 0.4);
-}
-
-.footer-social-links {
-    font-size: 56px;
-    text-align: center;
-}
-
-.footer-social-links a {
-    width: 100px;
-    height: 100px;
-    line-height: 100px !important;
-    position: relative;
-    margin: 0 20px;
-    text-align: center;
-    display: inline-block;
-    color: white;
-
-    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-}
-
-.footer-social-links a i,
-.footer-social-links a span {
-    position: relative;
-    top: 2px;
-    left: 1px;
-}
-
-.footer-social-links a:hover {
-    color: #fff;
-}
-
-.footer-social-links a:hover:before {
-    background: #111;
-}
-
-
-
-/*
-Svg Projects
-Author: Jonathan Trancozo
-Author_url: portfolio.jonathansilva.com.br/
-Project_url: http://jonathansilva.com.br/lab/gifs/coffee.html
-Language: HTML, CSS3 and SVG
-Project_version: V1
-Project_description: 
-[pt-br]
-Um belo dia Decidi melhorar minhas habilidades como desenvolvedor web, então comecei a criar projetos desafiadores para testar o que eu sabia fazer.
-
-Essa animação é uma tentativa de recriar o projeto original de Gal Shir [Coffee Machine] https://dribbble.com/shots/2513703-Coffee-Machine.
-
-Fiquei satisfeito com o resultado para o primeiro projeto.
-
-Espero em breve conseguir realizar animações mais complexas e desafiadoras.
-
-Até uma próxima.
-      
-
-[en]
-One day I decided to improve my skills as a web developer, so I started to create challenging projects to test what I could do.
-
-This animation is an attempt to recreate the original design Shir Gal [Coffee Machine]  https://dribbble.com/shots/2513703-Coffee-Machine.
-
-I was pleased with the result for the first project.
-
-I hope to soon be able to perform more complex and challenging animations.
-
-See you.
-
-*/
-
-html {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-
-html,
-body {
-    height: 100%;
-     overflow-y: scroll;
 }
 
 #coffee-wrap {
