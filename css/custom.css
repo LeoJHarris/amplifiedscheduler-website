@@ -1,8 +1,7 @@
-
 body {
-  position: relative;
-  font-family: 'Poppins', sans-serif;
-  background-color: transparent;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
 }
 
 
@@ -10,126 +9,123 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
 
 .character {
-  color: #80b8d9;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  font-weight: 700;
+    color: #80b8d9;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .face {
-  background-size: cover;
-  color: rgba(0, 0, 0, 0.2);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  transition: -webkit-filter 0.5s ease;
-  transition: filter 0.5s ease;
-  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: -webkit-filter 0.5s ease;
+    transition: filter 0.5s ease;
+    transition: filter 0.5s ease, -webkit-filter 0.5s ease;
 }
-.face:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-  cursor: pointer;
-}
-.face.is-active {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
 .footer {
-  margin-top: 1rem;
-  padding: 1rem;
-  text-align: center;
-  font-style: italic;
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
 }
 
 .name {
-  margin-bottom: 0;
-  font-size: 2rem;
-  font-weight: 900;
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 .quotation {
-  margin-top: -20px;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 2rem;
-  text-align: center;
+    margin-top: -20px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .profile {
-  max-width: 600px;
-  margin: 0 auto;
-  background-size: 450px;
-  background-repeat: no-repeat;
-  background-position-x: -20%;
-  background-position-y: 50%;
-  background-color: #000;
-  padding-top: 2rem;
-  padding-left: 1rem;
-  padding-bottom: 2rem;
-  color: #fff;
-  position: relative;
-}
-@media (min-width: 425px) {
-  .profile {
-    background-position-x: right;
-  }
-}
-@media (min-width: 685px) {
-  .profile {
-    background-position-x: 0%;
-    padding-left: 28rem;
-    padding-right: 3rem;
-  }
-}
-.profile::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 180px;
-  top: 0;
-}
-@media (min-width: 500px) {
-  .profile::after {
-    display: none;
-  }
+    max-width: 600px;
+    margin: 0 auto;
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position-x: -20%;
+    background-position-y: 50%;
+    background-color: #000;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    color: #fff;
+    position: relative;
 }
 
-.diagonal{
+@media (min-width: 425px) {
+    .profile {
+        background-position-x: right;
+    }
+}
+
+@media (min-width: 685px) {
+    .profile {
+        background-position-x: 0%;
+        padding-left: 28rem;
+        padding-right: 3rem;
+    }
+}
+
+.profile::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 180px;
+    top: 0;
+}
+
+@media (min-width: 500px) {
+    .profile::after {
+        display: none;
+    }
+}
+
+.diagonal {
     position: relative;
-  width: 100%;
-  height: 500px;
+    width: 100%;
+    height: 500px;
 }
 
 .right {
-  line-height: 200px;
-  height: 200px;
-  border: 3px solid green;
-  text-align: center;
+    line-height: 200px;
+    height: 200px;
+    border: 3px solid green;
+    text-align: center;
 }
 
-.one, .two {
-  position: absolute;
-  height: 300px;
-  width: 65%;
-}
-.one {
-  left: 0;
-  top: 0; height: 500px;
-  background: #161616 url("../images/pattern_40.gif") top left repeat;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%); 
-}
+.one,
 .two {
-  right: 0;
-  top: 0; height: 500px;
-  background-image: url(http://via.placeholder.com/350x150/fc9fc9);
-  -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
-  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%); 
+    position: absolute;
+    height: 300px;
+    width: 65%;
+}
+
+.one {
+    left: 0;
+    top: 0;
+    height: 500px;
+    background: #161616 url("../images/pattern_40.gif") top left repeat;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+}
+
+.two {
+    right: 0;
+    top: 0;
+    height: 500px;
+    background-image: url(http://via.placeholder.com/350x150/fc9fc9);
+    -webkit-clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
 #menuToggle {
@@ -250,6 +246,7 @@ body {
     padding: 10px 15px;
     text-align: center;
     font-family: "Montserra;
+
 }
 
 .nav-pills .nav-item .nav-link:not(.active):hover {
@@ -587,85 +584,84 @@ Main components
 
 
 .character {
-  color: #80b8d9;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  font-weight: 700;
+    color: #80b8d9;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
-.face {
-  background-size: cover;
-  color: rgba(0, 0, 0, 0.2);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  transition: -webkit-filter 0.5s ease;
-  transition: filter 0.5s ease;
-  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
-}
-.face:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-  cursor: context-menu;
-}
-.face.is-active {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
 .face1 {
-  background-image: url(../images/me2_hq.jpg);
+    background-image: url(../images/me2_hq.jpg);
 }
 
 .face2 {
-   background-image: url(../images/me_hq_close.jpg);
-  background-position-y: 50%;
+    background-image: url(../images/me4_hq.jpg);
+    background-position-y: 50%;
 }
+
 .face3 {
-  background-image: url(../images/me4_hq.jpg);
-  background-position-y: 20%;
+    background-image: url(../images/me_hq_close.jpg);
+    background-position-y: 20%;
+}
+.face4 {
+    background-image: url(../images/me3_hq.close.jpg);
+    background-position-y: 50%;
 }
 
 .title {
-  margin-top: 3rem;
-  padding-top: 0.5rem;
-  display: block;
+    padding-top: 0.5rem;
+    display: block;
     font-family: 'Coda', cursive;
-  text-align: center;
+    text-align: center;
 }
 
 @media (min-width: 425px) {
-  .title {
-    font-size: 5.5rem;
-  }
+    .title {
+        font-size: 3rem;
+    }
 }
+
 @media (min-width: 560px) {
-  .title {
-    font-size: 6rem;
-  }
+    .title {
+        font-size: 3rem;
+    }
 }
+
 @media (min-width: 685px) {
-  .title {
-    font-size: 7rem;
-  }
+    .title {
+        font-size: 5rem;
+    }
 }
+
 @media (min-width: 850px) {
-  .title {
-    padding-top: 1.2rem;
-    font-size: 10rem;
-  }
+    .title {
+        font-size:6rem;
+    }
 }
+
 @media (min-width: 938px) {
-  .title {
-    font-size: 10rem;
-  }
+    .title {
+        font-size: 7rem;
+    }
 }
+
 @media (min-width: 1026px) {
-  .title {
-    font-size: 14rem;
-  }
+    .title {
+        font-size: 9rem;
+    }
 }
+
+
+@media only screen and (min-width: 1170px) {
+    .cd-timeline-content {
+        color: white;
+        margin-left: 0;
+        padding: 1.6em;
+        width: 36%;
+        margin: 0 5%;
+    }
+
 
 @media only screen and (min-width: 1170px) {
     .cd-timeline-content {
@@ -744,13 +740,13 @@ Main components
 .avatar {
     width: 200px;
     height: 200px;
-    border:5px solid white;
-    border-radius: 50%; 
+    border: 5px solid white;
+    border-radius: 50%;
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-    border: 2px solid white; margin: auto
-    -webkit-border-radius: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    margin: auto -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
     margin-top: -100px;
 
@@ -1035,81 +1031,6 @@ body {
     font-weight: 700;
 }
 
-.face {
-    background-size: cover;
-    color: rgba(0, 0, 0, 0.2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-    
-    &:hover {
-        filter: grayscale(0%);
-        cursor: pointer;
-    }
-    
-    &.is-active {
-        filter: grayscale(0%);
-    }
-    
-    &--bryan {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/face-bryan-2.jpeg);
-        background-position-y: 50%;
-        margin-left: -9px;
-        
-        @media (min-width: $breakpoint-1) {
-            margin-left: -12px;
-        }
-        
-        @media (min-width: $breakpoint-2) {
-            margin-left: -15px;
-        }
-        
-        @media (min-width: $breakpoint-3) {
-            margin-left: -20px;
-        }
-        
-        @media (min-width: $breakpoint-4) {
-            margin-left: -25px;     
-        }
-        
-        @media (min-width: $breakpoint-5) {
-            margin-left: -30px;
-        }
-    }
-    
-    &--tatiana {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/face-tatiana.jpeg);
-        background-position-y: 40%;
-    }
-    
-    &--tony {
-        background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/face-tony.jpeg);
-        background-position-y: 85%;
-        margin-left: -10px;
-        
-        @media (min-width: $breakpoint-1) {
-            margin-left: -15px;
-        }
-        
-        @media (min-width: $breakpoint-2) {
-            margin-left: -18px;
-        }
-        
-        @media (min-width: $breakpoint-3) {
-            margin-left: -24px;
-        }
-        
-        @media (min-width: $breakpoint-4) {
-            margin-left: -30px;
-        }
-        
-        @media (min-width: $breakpoint-5) {
-            margin-left: -35px;
-        }
-    }
-}
-
 .footer {
     margin-top: 1rem;
     padding: 1rem;
@@ -1143,17 +1064,17 @@ body {
     padding-bottom: 2rem;
     color: #fff;
     position: relative;
-    
+
     @media (min-width: $breakpoint-1) {
         background-position-x: right;
     }
-    
+
     @media (min-width: $breakpoint-3) {
         background-position-x: 0%;
         padding-left: 28rem;
-        padding-right: 3rem;    
+        padding-right: 3rem;
     }
-    
+
     &::after {
         content: '';
         display: block;
@@ -1162,7 +1083,7 @@ body {
         width: 100%;
         height: 180px;
         top: 0;
-        
+
         @media (min-width: 500px) {
             display: none;
         }
@@ -1291,6 +1212,7 @@ body {
 }
 
 @media all and (max-width: 400px) {
+
     .contact-form textarea,
     .contact-form input {
         padding: .25em;
@@ -1456,43 +1378,48 @@ body {
 }
 
 #h4_exp {
-  text-align: left;
+    text-align: left;
 }
 
 .fa {
-  margin-left: 5%;
-  margin-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
+
 .flex-box {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
+
 h4 {
-  text-align: center;
-  color: blue;
-  font-weight: bold;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
 }
+
 .flex-box img {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
+
 .thumbnail .caption {
-  text-align: center;
-  color: blue;
-  font-weight: bold;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
 }
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
-a, a:hover {
+a,
+a:hover {
     text-decoration: none;
 }
 
-.socialbtns, .socialbtns ul, .socialbtns li {
-  margin: 0;
-  padding-bottom: 5px;
-  padding-top: 10px
+.socialbtns,
+.socialbtns ul,
+.socialbtns li {
+    margin: 0;
 }
 
 .socialbtns li {
@@ -1501,19 +1428,20 @@ a, a:hover {
 }
 
 .socialbtns .fa {
-    width: 80px;
-    font-size: 40px;
-    height: 80px;
-    color: #000;
+    width: 50px; 
+    text-align: center;
+    font-size: 25px;
+    height: 50px;
+    color: #000; margin: auto;
     background-color: #FFF;
     border: 1px solid #000;
-    padding-top: 23px;
-    border-radius: 40px;
-    -moz-border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -o-border-radius: 40px;
+    padding-top: 16px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -o-border-radius: 25px;
     margin-left: 20px;
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .socialbtns .fa:hover {
@@ -1523,14 +1451,9 @@ a, a:hover {
 }
 
 .intro-text {
-  margin-left: 15%;
-  margin-right: 15%;
-  font-size: large;
-}
-
-.intro-text2 {
-  font-size: 3rem;
-  text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
 }
 
 .skillbar {
