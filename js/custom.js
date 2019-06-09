@@ -344,10 +344,17 @@ contactForm.addEventListener('submit', function(event) {
 
 
 var _createClass = function() {
-    function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i];
+    function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];
             descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor); } } return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; };
+}();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 var rid = null;
@@ -430,205 +437,205 @@ divs.map(function(div) {
 
 //made by vipul mirajkar thevipulm.appspot.com
 var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
+    if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
+    } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+    }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+    var that = this;
+    var delta = 200 - Math.random() * 100;
 
-        if (this.isDeleting) { delta /= 2; }
+    if (this.isDeleting) { delta /= 2; }
 
-        if (!this.isDeleting && this.txt === fullTxt) {
+    if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
+    } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
         delta = 500;
-        }
+    }
 
-        setTimeout(function() {
+    setTimeout(function() {
         that.tick();
-        }, delta);
-    };
+    }, delta);
+};
 
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
         }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+};
 
 
 
 
-    // for animation 
+// for animation 
 
-$(document).ready(function(){
-  $('.pp-quote').click(function(){
-    $('.pp-quote').removeClass("active");
-    $(this).addClass("active");
-});
-});
-
-$(document).ready(function(){
-    
-       // hide-top
-
-        $('.li-quote-1').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');
-            $('.quote-text-1').addClass('show');
-            $('.quote-text-1').removeClass('hide-bottom');             
-        });
-
-        $('.li-quote-2').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');
-            $('.quote-text-2').addClass('show');             
-            $('.quote-text-2').removeClass('hide-bottom');
-        });
-
-        $('.li-quote-3').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');         
-            $('.quote-text-3').addClass('show');             
-            $('.quote-text-3').removeClass('hide-bottom');
-        });
-        $('.li-quote-4').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');      
-            $('.quote-text-4').addClass('show');             
-            $('.quote-text-4').removeClass('hide-bottom');
-        });
-        $('.li-quote-5').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');      
-            $('.quote-text-5').addClass('show');             
-            $('.quote-text-5').removeClass('hide-bottom');
-        });
-        $('.li-quote-6').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');      
-            $('.quote-text-6').addClass('show');             
-            $('.quote-text-6').removeClass('hide-bottom');
-        });
-        $('.li-quote-7').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');      
-            $('.quote-text-7').addClass('show');             
-            $('.quote-text-7').removeClass('hide-bottom');
-        });
-        $('.li-quote-8').click(function(e){ 
-            e.stopPropagation();
-            $(".show").addClass('hide-top');
-            $(".hide-top").removeClass('show');      
-            $('.quote-text-8').addClass('show');             
-            $('.quote-text-8').removeClass('hide-bottom');
-        });
-           
-    
+$(document).ready(function() {
+    $('.pp-quote').click(function() {
+        $('.pp-quote').removeClass("active");
+        $(this).addClass("active");
+    });
 });
 
+$(document).ready(function() {
 
-$(document).ready(function(){
-    
-       // hide-top
+    // hide-top
 
-        $('.li-quote-1').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-1').addClass('look');
-            $('.dp-name-1').removeClass('hide-dp-bottom');             
-        });
+    $('.li-quote-1').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-1').addClass('show');
+        $('.quote-text-1').removeClass('hide-bottom');
+    });
 
-        $('.li-quote-2').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-2').addClass('look');
-            $('.dp-name-2').removeClass('hide-dp-bottom');             
-        });
+    $('.li-quote-2').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-2').addClass('show');
+        $('.quote-text-2').removeClass('hide-bottom');
+    });
 
-        $('.li-quote-3').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-3').addClass('look');
-            $('.dp-name-3').removeClass('hide-dp-bottom');             
-        });
-        $('.li-quote-4').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-4').addClass('look');
-            $('.dp-name-4').removeClass('hide-dp-bottom');             
-        });
-        
-        $('.li-quote-5').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-5').addClass('look');
-            $('.dp-name-5').removeClass('hide-dp-bottom');             
-        });
-        
-        $('.li-quote-6').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-6').addClass('look');
-            $('.dp-name-6').removeClass('hide-dp-bottom');             
-        });
-        $('.li-quote-7').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-7').addClass('look');
-            $('.dp-name-7').removeClass('hide-dp-bottom');             
-        });
-        $('.li-quote-8').click(function(e){ 
-            e.stopPropagation();
-            $(".look").addClass('hide-dp-top');
-            $(".hide-dp-top").removeClass('look');
-            $('.dp-name-8').addClass('look');
-            $('.dp-name-8').removeClass('hide-dp-bottom');             
-        });
-           
-    
+    $('.li-quote-3').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-3').addClass('show');
+        $('.quote-text-3').removeClass('hide-bottom');
+    });
+    $('.li-quote-4').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-4').addClass('show');
+        $('.quote-text-4').removeClass('hide-bottom');
+    });
+    $('.li-quote-5').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-5').addClass('show');
+        $('.quote-text-5').removeClass('hide-bottom');
+    });
+    $('.li-quote-6').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-6').addClass('show');
+        $('.quote-text-6').removeClass('hide-bottom');
+    });
+    $('.li-quote-7').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-7').addClass('show');
+        $('.quote-text-7').removeClass('hide-bottom');
+    });
+    $('.li-quote-8').click(function(e) {
+        e.stopPropagation();
+        $(".show").addClass('hide-top');
+        $(".hide-top").removeClass('show');
+        $('.quote-text-8').addClass('show');
+        $('.quote-text-8').removeClass('hide-bottom');
+    });
+
+
+});
+
+
+$(document).ready(function() {
+
+    // hide-top
+
+    $('.li-quote-1').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-1').addClass('look');
+        $('.dp-name-1').removeClass('hide-dp-bottom');
+    });
+
+    $('.li-quote-2').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-2').addClass('look');
+        $('.dp-name-2').removeClass('hide-dp-bottom');
+    });
+
+    $('.li-quote-3').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-3').addClass('look');
+        $('.dp-name-3').removeClass('hide-dp-bottom');
+    });
+    $('.li-quote-4').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-4').addClass('look');
+        $('.dp-name-4').removeClass('hide-dp-bottom');
+    });
+
+    $('.li-quote-5').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-5').addClass('look');
+        $('.dp-name-5').removeClass('hide-dp-bottom');
+    });
+
+    $('.li-quote-6').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-6').addClass('look');
+        $('.dp-name-6').removeClass('hide-dp-bottom');
+    });
+    $('.li-quote-7').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-7').addClass('look');
+        $('.dp-name-7').removeClass('hide-dp-bottom');
+    });
+    $('.li-quote-8').click(function(e) {
+        e.stopPropagation();
+        $(".look").addClass('hide-dp-top');
+        $(".hide-dp-top").removeClass('look');
+        $('.dp-name-8').addClass('look');
+        $('.dp-name-8').removeClass('hide-dp-bottom');
+    });
+
+
 });
