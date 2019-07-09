@@ -265,6 +265,7 @@ img.rounded {
 .cd-timeline-content p {
     margin: 1em 0;
     line-height: 1.6;
+    font-size: 14px
 }
 
 .cd-timeline-content::before {
