@@ -310,13 +310,20 @@ img.rounded {
 .title {
     padding-top: 0.5rem;
     display: block;
+    margin: 0;
     font-family: 'Coda', cursive;
     text-align: center;
 }
 
+@media (max-width: 425px) {
+  .title  {
+     font-size: 3rem;
+  }
+}
+
 @media (min-width: 425px) {
     .title {
-        font-size: 7rem;
+        font-size: 5rem;
     }
 }
 
@@ -334,7 +341,7 @@ img.rounded {
 
 @media (min-width: 850px) {
     .title {
-        font-size: 12rem;
+        font-size: 10rem;
     }
 }
 
@@ -349,6 +356,55 @@ img.rounded {
         font-size: 14rem;
     }
 }
+
+.subtitle {
+    margin: auto; 
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+  .subtitle  {
+     font-size: 2rem;
+  }
+}
+
+@media (min-width: 425px) {
+    .subtitle {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 560px) {
+    .subtitle {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 685px) {
+    .subtitle {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 850px) {
+    .subtitle {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 938px) {
+    .subtitle {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1026px) {
+    .subtitle {
+        font-size: 6rem;
+    }
+}
+
 
 @media only screen and (min-width: 1170px) {
     .cd-timeline-content {
