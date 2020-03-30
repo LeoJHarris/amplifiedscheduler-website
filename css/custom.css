@@ -313,6 +313,8 @@ img.rounded {
     margin: 0;
     font-family: 'Coda', cursive;
     text-align: center;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2.00px; 
 }
 
 @media (max-width: 425px) {
@@ -361,6 +363,7 @@ img.rounded {
     margin: auto; 
     margin-bottom: 20px; 
     text-align: center;
+    color: white;
 }
 
 @media (max-width: 425px) {
@@ -906,33 +909,34 @@ a:hover {
 }
 
 .socialbtns .fa {
-    width: 50px;
+    width: 80px;
     text-align: center;
-    font-size: 25px;
-    height: 50px;
+    font-size: 40px;
+    height: 80px;
     color: #000;
     margin: auto;
     background-color: #FFF;
     border: 1px solid #000;
-    padding-top: 16px;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -o-border-radius: 25px;
+    padding-top: 23px;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -o-border-radius: 40px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .socialbtns .fa:hover {
-    color: #FFF;
-    background-color: #000;
-    border: 1px solid #000;
+    color: #FFF; font-size: 40px;
+    background:#161616 url("../images/pattern_40.gif") top left repeat; 
+    border: 1px solid white;
 }
 
 .intro-text {
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
+    color: white;
 }
 
 .skillbar {
