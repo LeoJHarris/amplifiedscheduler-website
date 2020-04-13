@@ -159,7 +159,7 @@ h5 {
 }
 
 .brand-heading {
-    font-size: 70px;
+    font-size: 60px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: left;
@@ -185,7 +185,7 @@ span.city {
         padding: 0;
     }
     .intro .intro-body .brand-heading {
-        font-size: 130px;
+        font-size: 100px;
     }
     .intro .intro-body .intro-text {
         font-size: 35px;
@@ -497,7 +497,7 @@ img.rounded {
 }
 
 .cd-timeline-img {
-    background: #161616 url("images/pattern_40.gif") top left repeat;
+    background: #161616 url("../images/pattern_40.gif") top left repeat;
 }
 
 @media only screen and (min-width: 1170px) {
