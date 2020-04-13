@@ -1380,6 +1380,15 @@ a:hover {
     width: 15px;
 }
 
+p > span {
+     font-weight: 700;
+     background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    width: 15px;
+}
+
 .about-intro-text .fa-beer {
     color: #40E0D0;
     font-size: 20px;
