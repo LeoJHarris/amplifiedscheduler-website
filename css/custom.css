@@ -118,7 +118,7 @@ h5 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #008080;
+    background-color: black;
     z-index: 99;
     height: 100%;
 }
@@ -174,7 +174,7 @@ h5 {
 
 span.city {
     background-color: white;
-    color: black;
+    color: black; padding: 5px;
     border-radius: 4px;
     width: 15px;
 }
@@ -1330,3 +1330,206 @@ a:hover {
     color: #ffffff;
     color: rgba(0, 0, 0, 0.4);
 }
+
+
+/* footer styles */
+
+  .footer {
+    background-color: #484848;
+    height: 100px;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .footer p{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .social-links a{
+    color: white;
+    padding: 0px 5px 0px 5px;
+  }
+
+  .social-links a:hover {
+    color: #FF6363;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /*/ start about /*/
+
+#about-me {
+    margin-top: 20px;
+}
+
+.about-intro-text p {
+    float: right;
+}
+
+.about-intro-text > span {
+    font-weight: 700;
+     background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    width: 15px;
+}
+
+.about-intro-text .fa-beer {
+    color: #40E0D0;
+    font-size: 20px;
+}
+
+.button-group {
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.text {
+    background: black;
+    color: #fff;
+    font-size: 18px;
+    height: 50px;
+    padding: 0 25px;
+    line-height: 50px;
+}
+
+
+.icon-cv {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    box-sizing: border-box;
+    border: 4px solid black;
+    border-left: none;
+    -webkit-transition: 600ms -webkit-transform ease-in-out;
+    transition: 600ms -webkit-transform ease-in-out;
+    transition: 600ms transform ease-in-out;
+    transition: 600ms transform ease-in-out, 600ms -webkit-transform ease-in-out;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    color: black;
+    background: #fff;
+    text-align: center;
+}
+
+a .fa-arrow-circle-down {
+    color: black;
+}
+
+.button-group:hover .icon-cv {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.button-group {
+    -webkit-perspective: 200px;
+    perspective: 200px;
+    -webkit-perspective-origin: calc(100% - 50px);
+    perspective-origin: calc(100% - 50px);
+    margin-top: 5%;
+}
+
+.about-inner {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.about-inner>img {
+    display: block;
+    min-width: 100%;
+    height: auto;
+}
+
+.about-ct{
+    border: 2px solid black;
+}
+
+.about-ct .textbox-about {
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.about-ct:hover .textbox-about {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.textbox-about {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+div.button-social {
+    border: 2px solid #fff;
+    padding: 12px 18px;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    margin-top: 25px;
+    font-size: 18px;
+    color: #fff;
+    margin: 5% 5%;
+}
+
+div.button-social a {
+    color: #fff;
+    font-size: 18px;
+    margin: 15px;
+}
+
+div.button-social a:hover {
+    color: #40E0D0;
+}
+
+.button-group:focus,
+.icon-cv:focus,
+.text:focus {
+    outline: 0;
+}
+
+
+/*/ start count stats /*/
+
+#counter-stats {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.stats {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: lowercase;
+}
+
+.stats .fa {
+    color: black;
+    font-size: 60px;
+}
+
+
+/*/ end count stats /*/
+
+
+/*/ end about /*/
