@@ -20,6 +20,20 @@ h2 {
     text-transform: lowercase;
 }
 
+.contact-head h2:after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: white;
+    display: block;
+    margin: 15px auto;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
 h2:after {
     content: '';
     width: 50px;
