@@ -162,9 +162,9 @@
     <!-- //Banner -->
     <section style="background: white;padding-top: 30px;" id="portfolio">
         <h2 style="color: black;text-align: center;padding-top: 50px; padding-bottom: 40px;">Portfolio</h2>
-        <h4 style="color: black;">Click image for info</h4>
+        <h4 style="color: black;">Click image for project details</h4>
         <div class="tab-content">
-            <div class="tab-pane active text-center gallery" id="all">
+            <div class="tab-pane active text-center" id="all">
                 <div class="gallery-info">
                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4 gallery-grids">
                         <a href="images/Portfolio_AmplifiedScheduler.png" class="gallery-box" data-lightbox="example-set" data-title="Native App (Java) Personal planning and event making made easy with Amplified Scheduler. This native Android app features Google Places API and Calendar integration for monthly and weekly planning. Use's Backendless (Software as a service) and is also featured on the Backendless site https://backendless.com/showcase/amplified-scheduler/">
@@ -426,33 +426,61 @@
         </div> <!-- cd-timeline-block -->
     </section> <!-- cd-timeline -->
     <!-- // Vertical Timeline -->
-    <section id="contact-form" style="margin-top: 2px" class="contact-form-wrapper">
-        <div class="contact-head">
-            <h2 class="pre" style="padding-top: 20px; padding-bottom: 20px;">Contact Me</h2>
+    <section id="contact-form" style="margin-top: 2px">
+        <h2 style="color: black;text-align: center; padding-top: 50px;">Contact me</h2>
+        <div id="app" class="row">
+            <form class="vue-form col-md-12 col-lg-6" @submit.prevent="submit">
+                <input type="hidden" name="_subject" value="New submission!" />
+                <div>
+                    <label class="label" for="name">Name</label>
+                    <input type="text" name="name" id="name" required="" placeholder="(your name here)" autocomplete="off" minlength="3" v-model="name">
+                </div>
+                <div>
+                    <label class="label" for="email">Email</label>
+                    <input type="email" id="email" name="_replyto" value="" placeholder="(your email)" autocomplete="off" required="required" :class="{ email , error: !email.valid }" v-model="email.value">
+                </div>
+                <div>
+                    <VuePhoneNumberInput v-model="" />
+                </div>
+                <div>
+                    <h4>What would you like to talk about</h4>
+                    <select v-model="selected">
+                        <option disabled value="">Select a Topic</option>
+                        <option>General</option>
+                        <option>Looking to Hire</option>
+                        <option></option>
+                    </select>
+                </div>
+                <div>
+                    <h4>Country</h4>
+                    <!-- <country-select /> -->
+                </div>
+                <div>
+                    <h4>Features</h4>
+                    <ul class="vue-form-list">
+                        <li v-for="(feature, index) in features">
+                            <input type="checkbox" :value="feature" :id="'cb-feature-'+index" v-model="selection.features">
+                            <label :for="'cb-feature-'+index">{{feature}}</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="checkbox-all" @click="checkAll">
+                            <label for="checkbox-all">Check All</label>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <label class="label" for="textarea">Project overview or message</label>
+                    <textarea class="message" placeholder="(your message here)" name="message" id="textarea" required="" v-model="message.text" :maxlength="message.maxlength"></textarea>
+                    <span class="counter">{{ message.text.length }} / {{ message.maxlength }}</span>
+                </div>
+                <div>
+                    <input type="submit" value="Send Form">
+                </div>
+            </form>
+            <div class="debug col-lg-4">
+                <pre class="d-none d-lg-block"><code>{{ $data }}</code></pre>
+            </div>
         </div>
-        <form action="https://formspree.io/leojharris@hotmail.com" method="POST" class="contact-form">
-            <p>My
-                <label for="name">name</label> is
-                <input class="contact-input" id="name" type="text" name="name" placeholder="(your name here)" autocomplete="off" minlength="3" />
-            </p>
-            <p>and my
-                <label for="email">email</label> is
-                <input class="contact-input" id="email" type="email" name="_replyto" value="" placeholder="(your email)" autocomplete="off" required="required" />
-            </p>
-            <p>and I would like to
-                <label for="message">chat about</label>
-            </p>
-            <p>
-                <textarea class="contact-input expanding" id="message" name="message" placeholder="(your message here)" autocomplete="off"></textarea>
-            </p>
-            <p>
-                <button id="contact-submit-button" type="submit">
-                    <svg class="send-icn" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="36px" viewbox="0 0 100 36" enable-background="new 0 0 100 36" xml:space="preserve">
-                        <path d="M100 0 100 0M23.8 7.1 100 0 40.9 36l-4.7-7.5L22 34.8l-4-11L0 30.5 16.4 8.7l5.4 15L23 7 23.8 7.1zM16.8 20.4l-1.5-4.3-5.1 6.7L16.8 20.4zM34.4 25.4l-8.1-13.1L25 29.6 34.4 25.4zM35.2 13.2l8.1 13.1L70 9.9 35.2 13.2z"></path>
-                    </svg><small>send</small>
-                </button>
-            </p>
-        </form>
     </section>
     <!-- end section -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -467,6 +495,10 @@
         });
     });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    
+    <script type="module" src="js/phone.js"></script>
+    <script type="module" src="js/country.js"></script>
     <script src="js/custom.js"></script>
 </body>
 

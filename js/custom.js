@@ -5,7 +5,6 @@ var requiredComponents = Array.prototype.slice.call(document.querySelectorAll("[
 var contactSubmitButton = document.getElementById('contact-submit-button');
 var contactActionUrl = "https://formspree.io";
 
-
 // PreLoader
 jQuery.noConflict();
 (function($) {
@@ -45,6 +44,63 @@ jQuery.noConflict();
         });
     });
 })(jQuery);
+
+
+// Regular expression from W3C HTML5.2 input specification:
+// https://www.w3.org/TR/html/sec-forms.html#email-state-typeemail
+var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+new Vue({
+    // root node
+    el: "#app",
+    // the instance state
+    data: function() {
+        return {
+            name: "",
+            email: {
+                value: "",
+                valid: true
+            },
+            selected: '',
+            features: ["Reactivity", "Encapsulation", "Data Binding"],
+            selection: {
+                features: []
+            },
+            message: {
+                text: "",
+                maxlength: 255
+            },
+            submitted: false
+        };
+    },
+    methods: {
+        // submit form handler
+        submit: function() {
+            this.submitted = true;
+        },
+        // validate by type and value
+        validate: function(type, value) {
+            if (type === "email") {
+                this.email.valid = this.isEmail(value) ? true : false;
+            }
+        },
+        // check for valid email adress
+        isEmail: function(value) {
+            return emailRegExp.test(value);
+        },
+        // check or uncheck all
+        checkAll: function(event) {
+            this.selection.features = event.target.checked ? this.features : [];
+        }
+    },
+
+    watch: {
+        // watching nested property
+        "email.value": function(value) {
+            this.validate("email", value);
+        }
+    }
+});
 
 // typer for hello
 window.onload = function() {
@@ -162,22 +218,22 @@ function initExpandingTextareas() {
 
     if (!document.querySelectorAll) {
         var getElementsByClass = function getElementsByClass(searchClass, node, tag) {
-                var classElements = new Array();
-                node = node || document;
-                tag = tag || '*';
-                var els = node.getElementsByTagName(tag);
-                var elsLen = els.length;
-                var pattern = new RegExp("(^|\\s)" + searchClass + "(\\s|$)");
-                for (i = 0, j = 0; i < elsLen; i++) {
-                    if (window.CP.shouldStopExecution(0)) break;
-                    if (pattern.test(els[i].className)) {
-                        classElements[j] = els[i];
-                        j++;
-                    }
+            var classElements = new Array();
+            node = node || document;
+            tag = tag || '*';
+            var els = node.getElementsByTagName(tag);
+            var elsLen = els.length;
+            var pattern = new RegExp("(^|\\s)" + searchClass + "(\\s|$)");
+            for (i = 0, j = 0; i < elsLen; i++) {
+                if (window.CP.shouldStopExecution(0)) break;
+                if (pattern.test(els[i].className)) {
+                    classElements[j] = els[i];
+                    j++;
                 }
-                window.CP.exitedLoop(0);
-                return classElements;
-            };
+            }
+            window.CP.exitedLoop(0);
+            return classElements;
+        };
 
         textareas = getElementsByClass('expanding');
     }
@@ -302,7 +358,7 @@ divs.map(function(div) {
 });
 
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function($) {
     var scrolling = false;
     var contentSections = $('.cd-section'),
         verticalNavigation = $('.cd-vertical-nav'),
@@ -313,49 +369,47 @@ jQuery(document).ready(function($){
     $(window).on('scroll', checkScroll);
 
     //smooth scroll to the selected section
-    verticalNavigation.on('click', 'a', function(event){
+    verticalNavigation.on('click', 'a', function(event) {
         event.preventDefault();
         smoothScroll($(this.hash));
         verticalNavigation.removeClass('open');
     });
 
     //smooth scroll to the second section
-    scrollArrow.on('click', function(event){
+    scrollArrow.on('click', function(event) {
         event.preventDefault();
         smoothScroll($(this.hash));
     });
 
     // open navigation if user clicks the .cd-nav-trigger - small devices only
-    navTrigger.on('click', function(event){
+    navTrigger.on('click', function(event) {
         event.preventDefault();
         verticalNavigation.toggleClass('open');
     });
 
     function checkScroll() {
-        if( !scrolling ) {
+        if (!scrolling) {
             scrolling = true;
-            (!window.requestAnimationFrame) ? setTimeout(updateSections, 300) : window.requestAnimationFrame(updateSections);
+            (!window.requestAnimationFrame) ? setTimeout(updateSections, 300): window.requestAnimationFrame(updateSections);
         }
     }
 
     function updateSections() {
-        var halfWindowHeight = $(window).height()/2,
+        var halfWindowHeight = $(window).height() / 2,
             scrollTop = $(window).scrollTop();
-        contentSections.each(function(){
+        contentSections.each(function() {
             var section = $(this),
                 sectionId = section.attr('id'),
-                navigationItem = navigationItems.filter('[href^="#'+ sectionId +'"]');
-            ( (section.offset().top - halfWindowHeight < scrollTop ) && ( section.offset().top + section.height() - halfWindowHeight > scrollTop) )
-                ? navigationItem.addClass('active')
-                : navigationItem.removeClass('active');
+                navigationItem = navigationItems.filter('[href^="#' + sectionId + '"]');
+            ((section.offset().top - halfWindowHeight < scrollTop) && (section.offset().top + section.height() - halfWindowHeight > scrollTop)) ?
+            navigationItem.addClass('active'): navigationItem.removeClass('active');
         });
         scrolling = false;
     }
-  
+
 
     function smoothScroll(target) {
-        $('body,html').animate(
-            {'scrollTop':target.offset().top},
+        $('body,html').animate({ 'scrollTop': target.offset().top },
             300
         );
     }
@@ -363,95 +417,18 @@ jQuery(document).ready(function($){
 
 
 function secHeight() {
-  var vpHeight = $(window).height();
-  $('section').css('min-height', vpHeight);
+    var vpHeight = $(window).height();
+    $('section').css('min-height', vpHeight);
 }
 
 function mClose() {
-  if ($('#menu').hasClass('on')) {
-      $('#menu').addClass('off').removeClass('on');
-  }
+    if ($('#menu').hasClass('on')) {
+        $('#menu').addClass('off').removeClass('on');
+    }
 }
 
 function animatescroll(id) {
-  $('body, html').animate({
-    scrollTop: $(id).offset().top
-  }, 500);
+    $('body, html').animate({
+        scrollTop: $(id).offset().top
+    }, 500);
 }
-
-function mSection() {
-  var topHome = $('#home').offset().top,
-      topAbout = $('#about').offset().top,
-      topPort = $('#portfolio').offset().top,
-      topBlog = $('#blog').offset().top,
-      topCont = $('#contact').offset().top,
-      menuAll = $('#menu a').removeClass('active');
-  
-  if ($(window).scrollTop() < topAbout) {
-    menuAll;
-    $('#menu a:contains("Home")').addClass('active');
-  } else if ($(window).scrollTop() >= topCont) {
-    menuAll;
-    $('#menu a:contains("Contact")').addClass('active');
-  } else if ($(window).scrollTop() >= topBlog) {
-    menuAll;
-    $('#menu a:contains("Blog")').addClass('active');
-  } else if ($(window).scrollTop() >= topPort) {
-    menuAll;
-    $('#menu a:contains("Portfolio")').addClass('active');
-  } else if ($(window).scrollTop() >= topAbout) {
-    menuAll;
-    $('#menu a:contains("About")').addClass('active');
-  }
-}
-
-$(document).ready(function(){
-  var menu = $('#menu');
-  $('.icon').click(function() {
-    menu.toggleClass('on').toggleClass('off');
-  });
-  
-  var menuItem = $('#menu a');
-  menuItem.click(function() {
-    if (!$(this).hasClass('active')) {
-      menuItem.removeClass('active');
-      $(this).addClass('active');
-    }
-  });
-  
-  secHeight();
-  
-  if ($('.icon').css('display') == 'none') {
-    $('#menu').removeClass('off').removeClass('on');
-  } else if ($('.icon').css('display') == 'block' && !$('#menu').is('.off, .on')) {
-    $('#menu').addClass('off');
-  } 
-});
-
-$(window).resize(function(){
-  secHeight();
-  if ($('.icon').css('display') == 'none') {
-    $('#menu').removeClass('off').removeClass('on');
-  } else if ($('.icon').css('display') == 'block' && !$('#menu').is('.off, .on')) {
-    $('#menu').addClass('off');
-  } 
-});
-
-$(window).scroll(function() {
-  mClose(); mSection();
-});
-
-$(document).mouseup(function(e) {
-  var container = $('#menu');
-  
-  if (!container.is(e.target) && container.has(e.target).length === 0 && container.hasClass('on') && !$('.icon').is(e.target)) {
-    container.addClass('off').removeClass('on');
-  }
-});
-
-
-
-
-
-
-
