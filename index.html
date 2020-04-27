@@ -13,7 +13,6 @@
     <link href="css/bars.css" rel="stylesheet" type="text/css">
     <!-- for skills -->
     <!-- custom-theme files -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Coda:800&display=swap" rel="stylesheet">
     <!-- //custom-theme files -->
     <!-- font-awesome-icons -->
@@ -26,7 +25,11 @@
     <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
     <!-- //googlefonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="css/custom.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+   
 </head>
 
 <body>
@@ -440,7 +443,8 @@
                     <input type="email" id="email" name="_replyto" value="" placeholder="(your email)" autocomplete="off" required="required" :class="{ email , error: !email.valid }" v-model="email.value">
                 </div>
                 <div>
-                    <VuePhoneNumberInput v-model="" />
+                    <h4>Phone Number</h4>
+                 <VuePhoneNumberInput id="VuePhoneNumberInput" />
                 </div>
                 <div>
                     <h4>What would you like to talk about</h4>
@@ -483,7 +487,6 @@
         </div>
     </section>
     <!-- end section -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -495,11 +498,18 @@
         });
     });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    
-    <script type="module" src="js/phone.js"></script>
-    <script type="module" src="js/country.js"></script>
+
     <script src="js/custom.js"></script>
+
+    
+<script src="https://unpkg.com/vue" charset="utf-8"></script>
+<script src="vue-phone-number-input/dist/vue-phone-number-input.umd.min.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="vue-phone-number-input/dist/vue-phone-number-input.css">
+
+<script type="text/javascript">
+  Vue.component('vue-phone-number-input', window.VuePhoneNumberInput.default);
+</script>
+
 </body>
 
 </html>

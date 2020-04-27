@@ -1,0 +1,113 @@
+{
+  "_from": "vue-phone-number-input",
+  "_id": "vue-phone-number-input@1.1.7",
+  "_inBundle": false,
+  "_integrity": "sha512-M/enpmDTj+msQTmT/u6257llvxQZZX7xz9e/1sIB5Nsw10Ps8ibEUcS5glMjJPsusxOIa/ENKH28Tgm1xCkYyA==",
+  "_location": "/vue-phone-number-input",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "vue-phone-number-input",
+    "name": "vue-phone-number-input",
+    "escapedName": "vue-phone-number-input",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vue-phone-number-input/-/vue-phone-number-input-1.1.7.tgz",
+  "_shasum": "765ed2bce3a375636654d047f82a1bcdc1411597",
+  "_spec": "vue-phone-number-input",
+  "_where": "C:\\Users\\Admin",
+  "author": {
+    "name": "Louis Mazel",
+    "email": "me@loicmazuel.com"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "bugs": {
+    "url": "https://github.com/LouisMazel/vue-phone-number-input/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "libphonenumber-js": "^1.7.26",
+    "style-helpers": "^1.0.1",
+    "vue": "^2.6.10",
+    "vue-virtual-scroller": "^1.0.0-rc.2"
+  },
+  "deprecated": false,
+  "description": "A phone number input made with Vue JS && libphonenumber-js",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^4.2.3",
+    "@vue/cli-service": "^4.1.1",
+    "babel-eslint": "^10.0.1",
+    "color-transformer-ui": "0.0.2",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.13.1",
+    "nuxt": "^2.10.2",
+    "path": "^0.12.7",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^11.1.1",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-scss": "^3.12.1",
+    "vue-server-renderer": "^2.6.11",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "files": [
+    "dist/",
+    "nuxt/"
+  ],
+  "homepage": "https://github.com/LouisMazel/vue-phone-number-input#readme",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "input",
+    "phone",
+    "number",
+    "format",
+    "text",
+    "javascript",
+    "vue-component"
+  ],
+  "license": "MIT",
+  "main": "dist/vue-phone-number-input.common.js",
+  "name": "vue-phone-number-input",
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisMazel/vue-phone-number-input.git"
+  },
+  "scripts": {
+    "before-publish": "npm audit && npm run lint && npm i && npm run build",
+    "build": "npm run build:lib && npm run build:docs",
+    "build:docs": "vue-cli-service build --dest docs --mode production",
+    "build:lib": "vue-cli-service build --target lib ./src/VuePhoneNumberInput/index.vue",
+    "lint": "vue-cli-service lint && npm run lint:style",
+    "lint:style": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
+    "lint:style:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
+    "publish-npm:beta": "npm publish --tag beta",
+    "serve": "vue-cli-service serve --mode development --open",
+    "serve:build": "vue-cli-service serve --mode production",
+    "serve:nuxt": "nuxt src",
+    "test": "vue-cli-service test:unit /test/specs",
+    "test:unit": "vue-cli-service test:unit",
+    "test:unit:watch": "vue-cli-service test:unit --watch",
+    "ui": "vue ui"
+  },
+  "types": "dist/index.d.ts",
+  "version": "1.1.7"
+}

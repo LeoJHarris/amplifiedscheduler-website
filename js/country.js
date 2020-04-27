@@ -1,5 +1,3 @@
-// too be added before mounting app
-import Vue from 'vue'
 import vueCountryRegionSelect from 'vue-country-region-select'
 Vue.use(vueCountryRegionSelect)
  
