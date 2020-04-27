@@ -28,8 +28,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="css/custom.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-   
+    
 </head>
 
 <body>
@@ -429,10 +428,11 @@
         </div> <!-- cd-timeline-block -->
     </section> <!-- cd-timeline -->
     <!-- // Vertical Timeline -->
+
     <section id="contact-form" style="margin-top: 2px">
         <h2 style="color: black;text-align: center; padding-top: 50px;">Contact me</h2>
         <div id="app" class="row">
-            <form class="vue-form col-md-12 col-lg-6" @submit.prevent="submit">
+            <form class="vue-form col-md-12 col-lg-6" action="https://formspree.io/leojharris@hotmail.com" method="POST" >
                 <input type="hidden" name="_subject" value="New submission!" />
                 <div>
                     <label class="label" for="name">Name</label>
@@ -442,29 +442,29 @@
                     <label class="label" for="email">Email</label>
                     <input type="email" id="email" name="_replyto" value="" placeholder="(your email)" autocomplete="off" required="required" :class="{ email , error: !email.valid }" v-model="email.value">
                 </div>
-                <div>
+                <!-- <div>
                     <h4>Phone Number</h4>
-                 <VuePhoneNumberInput id="VuePhoneNumberInput" />
-                </div>
+                    <VuePhoneNumberInput  />
+                </div> -->
                 <div>
-                    <h4>What would you like to talk about</h4>
-                    <select v-model="selected">
+                     <label class="label" for="discuss">What would you like to talk about (optional)</label>
+                    <select id="discuss" name="discuss" v-model="discuss">
                         <option disabled value="">Select a Topic</option>
-                        <option>General</option>
                         <option>Looking to Hire</option>
-                        <option></option>
+                        <option>Lets meet for a Coffee</option>
+                        <option>Other</option>
                     </select>
                 </div>
-                <div>
+               <!--  <div>
                     <h4>Country</h4>
-                    <!-- <country-select /> -->
-                </div>
+                    <country-select />
+                </div> -->
                 <div>
-                    <h4>Features</h4>
-                    <ul class="vue-form-list">
-                        <li v-for="(feature, index) in features">
-                            <input type="checkbox" :value="feature" :id="'cb-feature-'+index" v-model="selection.features">
-                            <label :for="'cb-feature-'+index">{{feature}}</label>
+                    <label class="label" for="seeking">What are you looking for (optional)</label>
+                    <ul id="seeking" name="seeking"  class="vue-form-list">
+                        <li v-for="(tech, index) in seeking">
+                            <input type="checkbox" :value="tech" :id="'cb-teck-'+index" v-model="selection">
+                            <label :for="'cb-teck-'+index">{{tech}}</label>
                         </li>
                         <li>
                             <input type="checkbox" id="checkbox-all" @click="checkAll">
@@ -481,7 +481,10 @@
                     <input type="submit" value="Send Form">
                 </div>
             </form>
-            <div class="debug col-lg-4">
+            <div class="debug col-lg-3">
+                 <div>
+                    <h4  class="d-none d-lg-block" style="color: black">Payload</h4>
+                </div>
                 <pre class="d-none d-lg-block"><code>{{ $data }}</code></pre>
             </div>
         </div>
@@ -498,13 +501,15 @@
         });
     });
     </script>
-<script src="https://unpkg.com/vue" charset="utf-8"></script>
-<script src="vue-phone-number-input/dist/vue-phone-number-input.umd.min.js" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="vue-phone-number-input/dist/vue-phone-number-input.css">
+    <!-- <script src="vue-phone-number-input/dist/vue-phone-number-input.umd.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="vue-phone-number-input/dist/vue-phone-number-input.css">
+    <script type="text/javascript">
+    Vue.component('vue-phone-number-input', window.VuePhoneNumberInput.default);
+    </script> -->
 
-<script type="text/javascript">
-  Vue.component('vue-phone-number-input', window.VuePhoneNumberInput.default);
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://unpkg.com/vue" charset="utf-8"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 

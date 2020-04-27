@@ -61,11 +61,10 @@ new Vue({
                 value: "",
                 valid: true
             },
-            selected: '',
-            features: ["Reactivity", "Encapsulation", "Data Binding"],
-            selection: {
-                features: []
-            },
+            discuss: '',
+            seeking: ["Xamarin", "Java/Kotlin", "C#", "MVC", ".NET CORE", "React", "Node.js"],
+            selection: []
+            ,
             message: {
                 text: "",
                 maxlength: 255
@@ -90,7 +89,7 @@ new Vue({
         },
         // check or uncheck all
         checkAll: function(event) {
-            this.selection.features = event.target.checked ? this.features : [];
+            this.selection = event.target.checked ? this.seeking : [];
         }
     },
 

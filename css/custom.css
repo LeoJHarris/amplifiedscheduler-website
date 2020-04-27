@@ -1432,16 +1432,14 @@ input::placeholder {
 .debug {
     border-radius: 0px;
     width: 500px;
-    margin: 50px auto;
 }
 
 .debug pre {
     font-size: 14px;
-    line-height: 30px;
+    line-height: 22px;
     font-family: "Source Code Pro", monospace;
     font-weight: 300;
     white-space: pre-wrap;
-    border: transparent;
 }
 
 @-webkit-keyframes cd-bounce {
