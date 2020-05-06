@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/custom.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+   
 
 </head>
 
@@ -450,8 +450,8 @@
 </div>
                 </div> -->
                 <div>
-                    <label class="label" for="discuss">What would you like to talk about (optional)</label>
-                    <select id="discuss" name="discuss" v-model="discuss">
+                    <label class="label" for="topic">What would you like to talk about (optional)</label>
+                    <select id="topic" name="topic" v-model="topic">
                         <option disabled value="">Select a Topic</option>
                         <option>Looking to Hire</option>
                         <option>Lets meet for a Coffee</option>
@@ -462,7 +462,7 @@
                     <h4>Country</h4>
                     <country-select />
                 </div> -->
-                <div>
+                <!-- <div>
                     <label class="label" for="seeking">What are you looking for (optional)</label>
                     <ul id="seeking" name="seeking" class="vue-form-list">
                         <li v-for="(tech, index) in seeking">
@@ -474,7 +474,7 @@
                             <label for="checkbox-all">Check All</label>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <div>
                     <label class="label" for="textarea">Project overview or message</label>
                     <textarea class="message" placeholder="(your message here)" name="message" id="textarea" required="" v-model="message.text" :maxlength="message.maxlength"></textarea>
@@ -494,7 +494,6 @@
     </section>
     <!-- end section -->
 
-
 <!-- <script type="module">
     import VuePhoneNumberInput from './vue-phone-number-input';
 import './vue-phone-number-input/dist/vue-phone-number-input.css';
@@ -502,6 +501,7 @@ import './vue-phone-number-input/dist/vue-phone-number-input.css';
 Vue.component('vue-phone-number-input', VuePhoneNumberInput);
 </script> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script type="text/javascript">

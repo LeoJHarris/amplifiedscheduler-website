@@ -4,6 +4,7 @@ var textboxen = Array.prototype.slice.call(document.querySelectorAll(".contact-f
 var requiredComponents = Array.prototype.slice.call(document.querySelectorAll("[required]"));
 var contactSubmitButton = document.getElementById('contact-submit-button');
 var contactActionUrl = "https://formspree.io";
+var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 // PreLoader
 jQuery.noConflict();
@@ -45,11 +46,6 @@ jQuery.noConflict();
     });
 })(jQuery);
 
-
-// Regular expression from W3C HTML5.2 input specification:
-// https://www.w3.org/TR/html/sec-forms.html#email-state-typeemail
-var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
 new Vue({
     // root node
     el: "#app",
@@ -61,10 +57,7 @@ new Vue({
                 value: "",
                 valid: true
             },
-            discuss: '',
-            seeking: ["Xamarin", "Java/Kotlin", "C#", "MVC", ".NET CORE", "React", "Node.js"],
-            selection: []
-            ,
+            topic: "",
             message: {
                 text: "",
                 maxlength: 255
