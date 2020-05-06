@@ -1418,7 +1418,6 @@ input::placeholder {
 
 .vue-form .counter {
     background-color: #ecf0f1;
-    position: absolute;
     right: 0px;
     top: 0px;
     font-size: 10px;
