@@ -1,8 +1,4 @@
 body {
-    background-color: white;
-}
-
-body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     width: 100%;
@@ -127,7 +123,7 @@ h5 {
     height: auto;
     text-align: center;
     color: white;
-    background-image: url("../images/hero_background.jpg") no-repeat top center scroll;
+    background: url("../images/hero_background.jpg") no-repeat top center scroll;
     background-size: cover;
     -o-background-size: cover;
 }
@@ -274,20 +270,6 @@ li.portfolio-tag {
     padding: 8px;
     margin: 3px 2px;
 }
-
-.face {
-    background-size: cover;
-    color: rgba(0, 0, 0, 0.2);
-    -webkit-background-clip: text;
-    transition: -webkit-filter 0.5s ease;
-    transition: filter 0.5s ease;
-    transition: filter 0.5s ease, -webkit-filter 0.5s ease;
-}
-
-.tech-tabs {
-    padding-top: 50px;
-}
-
 .intro-text {
     font-size: 18px
 }
@@ -506,33 +488,6 @@ img.rounded {
     width: 0;
     border: 7px solid transparent;
     border-right: 7px solid #333c42;
-}
-
-.character {
-    color: #80b8d9;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-
-.face1 {
-    background-image: url(../images/me2_hq.jpg);
-}
-
-.face2 {
-    background-image: url(../images/me4_hq.jpg);
-    background-position-y: 50%;
-}
-
-.face3 {
-    background-image: url(../images/me_hq_close.jpg);
-    background-position-y: 20%;
-}
-
-.face4 {
-    background-image: url(../images/me3_hq.close.jpg);
-    background-position-y: 50%;
 }
 
 .title {
@@ -771,7 +726,6 @@ hr {
     padding: 2.6666666667em 0;
 }
 
-
 /*
  * kept finding myself attaching is-marginless to all elements that also utilized the columns class
  * this helps override that
@@ -934,44 +888,8 @@ a:hover {
     color: rgba(0, 0, 0, 0.4);
 }
 
-
-/* footer styles */
-
-.footer {
-    background-color: #484848;
-    height: 100px;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.footer p {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.social-links a {
-    color: white;
-    padding: 0px 5px 0px 5px;
-}
-
-.social-links a:hover {
-    color: #FF6363;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-/*/ start about /*/
-
 #about-me {
     margin-top: 20px;
-}
-
-.about-intro-text p {
-    float: right;
 }
 
 .about-intro-text>span {
@@ -992,11 +910,6 @@ p>span {
     width: 15px;
 }
 
-.about-intro-text .fa-beer {
-    color: #40E0D0;
-    font-size: 20px;
-}
-
 .button-group {
     cursor: pointer;
     display: -webkit-inline-box;
@@ -1012,7 +925,6 @@ p>span {
     padding: 0 25px;
     line-height: 50px;
 }
-
 
 .icon-cv {
     font-size: 30px;
@@ -1066,50 +978,6 @@ a .fa-arrow-circle-down {
 
 .about-ct {
     border: 2px solid black;
-}
-
-.about-ct .textbox-about {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-
-.about-ct:hover .textbox-about {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-.textbox-about {
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease;
-}
-
-div.button-social {
-    border: 2px solid #fff;
-    padding: 12px 18px;
-    -webkit-transition: all .35s;
-    transition: all .35s;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    margin-top: 25px;
-    font-size: 18px;
-    color: #fff;
-    margin: 5% 5%;
-}
-
-div.button-social a {
-    color: #fff;
-    font-size: 18px;
-    margin: 15px;
-}
-
-div.button-social a:hover {
-    color: #40E0D0;
 }
 
 .button-group:focus,
